@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stock Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">GoStock</div>
+      <div class="investment-box">
+        <p>Total Investment</p>
+        <h2>$5380.90</h2>
+        <span class="green">+18.10%</span>
+      </div>
+      <nav>
+        <ul>
+          <li class="active">Home</li>
+          <li>Dashboard</li>
+          <li>Wallet</li>
+          <li>News</li>
+          <li>Stock & Fund</li>
+          <li>Community</li>
+          <li>Settings</li>
+          <li>Contact Us</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <header class="header">
+        <input type="text" id="search" placeholder="🔍 Search for various stocks" />
+        <div class="profile">
+          <img src="https://i.pravatar.cc/40" alt="User" class="avatar" />
+          <span class="username">Arlangga Mahesa</span>
+        </div>
+      </header>
+
+      <!-- Portfolio Section -->
+      <section class="portfolio">
+        <h2>My Portfolio</h2>
+        <div class="portfolio-cards" id="portfolio-cards">
+          <!-- Example cards -->
+          <div class="card">
+            <h4>Apple</h4>
+            <p>$310.40</p>
+            <span class="negative">-1.10%</span>
+          </div>
+          <div class="card">
+            <h4>Meta</h4>
+            <p>$140.45</p>
+            <span class="negative">-0.10%</span>
+          </div>
+          <div class="card">
+            <h4>Microsoft</h4>
+            <p>$240.98</p>
+            <span class="positive">+0.85%</span>
+          </div>
+          <div class="card">
+            <h4>Google</h4>
+            <p>$99.12</p>
+            <span class="negative">-0.04%</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stock Chart Section -->
+      <section class="stock-chart">
+        <div class="chart-header">
+          <h3 id="stock-name">Apple Inc</h3>
+          <span id="stock-price">$150.70</span>
+        </div>
+        <canvas id="stockChart"></canvas>
+      </section>
+
+      <!-- Watchlist Section -->
+      <section class="watchlist">
+        <h3>My Watchlist</h3>
+        <ul id="watchlist">
+          <li><span class="stock">SPOT</span><span class="price">$110.40</span></li>
+          <li><span class="stock">ABNB</span><span class="price negative">$137.72</span></li>
+          <li><span class="stock">SHOP</span><span class="price">$28.57</span></li>
+          <li><span class="stock">SONY</span><span class="price">$91.70</span></li>
+          <li><span class="stock">DBX</span><span class="price negative">$23.06</span></li>
+          <li><span class="stock">PYPL</span><span class="price negative">$87.66</span></li>
+        </ul>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>This was coded by <a href="https://github.com/ShaniceJordan/" target="_blank">Shanice Jordan</a>, 
+          <a href="https://github.com/ShaniceJordan/Stock-MArket-Dashboard.git" target="_blank">open-sourced on GitHub</a>, 
+          and is <a href="https://stockmarketdash.netlify.app/" target="_blank">hosted on Netlify</a>.
+        </p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

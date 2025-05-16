@@ -1,4 +1,4 @@
-/* General Reset & Base Styles */
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -8,15 +8,8 @@
 
 body {
   background-color: #f5f6fa;
-  color: #333;
   display: flex;
   justify-content: center;
-  min-height: 100vh;
-}
-
-a {
-  color: #0077cc;
-  text-decoration: none;
 }
 
 .container {
@@ -27,36 +20,34 @@ a {
 
 /* Sidebar */
 .sidebar {
-  width: 240px;
-  background-color: #fff;
-  padding: 2rem 1rem;
-  border-right: 1px solid #e0e0e0;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  width: 250px;
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-right: 1px solid #ddd;
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #222;
+  margin-bottom: 2rem;
 }
 
 .investment-box {
-  background-color: #f0f4ff;
+  background: #eef4ff;
   padding: 1rem;
   border-radius: 12px;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
 .investment-box p {
   font-size: 0.9rem;
-  color: #666;
+  color: #555;
 }
 
 .investment-box h2 {
+  font-size: 1.8rem;
   margin: 0.5rem 0;
-  color: #222;
 }
 
 .green {
@@ -66,133 +57,108 @@ a {
 
 nav ul {
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
 }
 
 nav ul li {
+  margin: 1rem 0;
   cursor: pointer;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border-radius: 8px;
-  transition: background 0.2s;
 }
 
-nav ul li:hover,
-nav ul li.active {
-  background-color: #e6f0ff;
-  color: #0056b3;
+nav ul li.active,
+nav ul li:hover {
+  background: #e0ebff;
+  color: #0044cc;
   font-weight: 500;
 }
 
-/* Main Area */
+/* Main */
 .main {
   flex: 1;
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
 }
 
-/* Header */
-.header {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1.5rem;
 }
 
-.header input {
-  width: 300px;
-  padding: 0.75rem 1rem;
-  border-radius: 10px;
+header input {
+  padding: 0.7rem 1rem;
+  width: 250px;
   border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-right: 1rem;
 }
 
-.profile {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
-.username {
-  font-weight: 500;
-}
-
-/* Portfolio Cards */
-.portfolio {
-  display: flex;
-  flex-direction: column;
+header button {
+  padding: 0.7rem 1rem;
+  background: #007bff;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .portfolio h2 {
   margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
 .portfolio-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .card {
-  background-color: #fff;
+  background: #fff;
   padding: 1rem;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  width: 180px;
   text-align: center;
 }
 
 .card h4 {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .positive {
   color: #27ae60;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .negative {
   color: #e74c3c;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 /* Chart Section */
 .stock-chart {
-  background-color: #fff;
-  padding: 1rem 2rem;
+  background: #fff;
+  padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  margin-top: 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 .chart-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 1rem;
-}
-
-#stock-name {
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-#stock-price {
-  font-size: 1.25rem;
-  color: #2c3e50;
 }
 
 /* Watchlist */
 .watchlist {
-  background-color: #fff;
-  padding: 1rem 1.5rem;
+  background: #fff;
+  margin-top: 2rem;
+  padding: 1rem;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 .watchlist h3 {
@@ -201,33 +167,18 @@ nav ul li.active {
 
 .watchlist ul {
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
 }
 
 .watchlist li {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 0;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.stock {
-  font-weight: 500;
-}
-
-.price {
-  font-weight: 500;
-}
-
-.price.negative {
-  color: #e74c3c;
+  border-bottom: 1px solid #eee;
 }
 
 /* Footer */
-.footer {
+footer {
   margin-top: 2rem;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: #777;
 }
