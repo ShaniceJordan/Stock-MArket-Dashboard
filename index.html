@@ -2,21 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Stock Market Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stock Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <div class="dashboard">
-    <h1>Stock Market Dashboard</h1>
-    <input type="text" id="symbol" placeholder="Enter symbol (e.g. AAPL)" />
-    <button onclick="getStock()">Get Data</button>
-    <div id="stock-info" class="stock-info"></div>
-    <canvas id="chart" width="400" height="200"></canvas>
-  </div>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">GoStock</div>
+      <div class="investment-box">
+        <p>Total Investment</p>
+        <h2>$5380.90</h2>
+        <span class="green">+18.10%</span>
+      </div>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li class="active">Dashboard</li>
+          <li>Wallet</li>
+          <li>News</li>
+          <li>Stock & Fund</li>
+          <li>Community</li>
+          <li>Settings</li>
+          <li>Contact Us</li>
+        </ul>
+      </nav>
+    </aside>
 
-   <footer>
+    <main class="main">
+      <header>
+        <input type="text" id="search" placeholder="Search for stocks (e.g. AAPL)" />
+        <button onclick="getStockData()">Search</button>
+      </header>
+       <footer>
         
         This was coded by
         <a href="https://github.com/ShaniceJordan/" target="_blank">Shanice Jordan </a>
@@ -24,8 +43,30 @@
         </footer> 
          
          open-sourced on GitHub </a>
-         and is<a href="https://afrench-poem-generator.netlify.app/" target="_blank"> hosted on Netlify.
+         and is<a href="https://stockmarketdash.netlify.app/" target="_blank"> hosted on Netlify.
     </footer>
+
+      
+
+      <section class="portfolio">
+        <h2>My Portfolio</h2>
+        <div class="portfolio-cards" id="portfolio-cards"></div>
+      </section>
+
+      <section class="stock-chart">
+        <div class="chart-header">
+          <h3 id="stock-name">Apple Inc</h3>
+          <span id="stock-price">$150.70</span>
+        </div>
+        <canvas id="stockChart"></canvas>
+      </section>
+
+      <section class="watchlist">
+        <h3>My Watchlist</h3>
+        <ul id="watchlist"></ul>
+      </section>
+    </main>
+  </div>
 
   <script src="index.js"></script>
 </body>
